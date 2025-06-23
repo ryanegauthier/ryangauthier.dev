@@ -1,30 +1,28 @@
-# 🚀 DreamHost Deployment Checklist
+# 🚀 DreamHost Deployment Checklist (Static Website)
 
 ## Pre-Deployment Setup
-- [ ] Gmail 2-Factor Authentication enabled
-- [ ] Gmail App Password generated
+- [x] Formspree account created
+- [x] Formspree form endpoint obtained
 - [ ] Google reCAPTCHA account created
 - [ ] reCAPTCHA site configured for ryangauthier.dev
-- [ ] DreamHost account with Node.js hosting
+- [ ] DreamHost shared hosting account
 
 ## DreamHost Configuration
-- [ ] Node.js enabled for ryangauthier.dev
-- [ ] Application startup file set to `server.js`
-- [ ] Node.js version set to 18.x or 20.x
-- [ ] Application root configured
-
-## File Upload
-- [ ] All files uploaded to DreamHost server
-- [ ] `.env` file created with real credentials
-- [ ] `npm install` run on server
+- [ ] Domain ryangauthier.dev configured
+- [ ] Website files uploaded to public_html directory
 - [ ] File permissions set correctly (644 for files, 755 for directories)
 
-## Environment Variables (.env)
-- [ ] `EMAIL_USER=ryan.eugene.gauthier@gmail.com`
-- [ ] `EMAIL_PASS=your-gmail-app-password`
-- [ ] `RECAPTCHA_SITE_KEY=your-site-key`
-- [ ] `RECAPTCHA_SECRET_KEY=your-secret-key`
-- [ ] `PORT=3000`
+## File Upload
+- [ ] All HTML, CSS, and image files uploaded to DreamHost server
+- [x] Formspree endpoint updated in index.html
+- [ ] reCAPTCHA keys added to form (if needed)
+
+## Formspree Setup
+- [x] Account created at [formspree.io](https://formspree.io)
+- [x] New form created for ryangauthier.dev
+- [x] Form endpoint ID copied (starts with 'x')
+- [x] Form endpoint updated in index.html contact form
+- [ ] Email notifications configured
 
 ## Domain & SSL
 - [ ] DNS records pointing to DreamHost
@@ -32,29 +30,25 @@
 - [ ] Domain ryangauthier.dev configured
 
 ## Testing
-- [ ] Application restarted in DreamHost panel
 - [ ] Site loads at https://ryangauthier.dev
-- [ ] Contact form works
-- [ ] Emails are being sent
-- [ ] reCAPTCHA verification working
-- [ ] No errors in application logs
+- [ ] Contact form works and sends emails
+- [ ] Formspree notifications received
+- [ ] No errors in browser console
 
 ## Security
-- [ ] .env file not committed to git
-- [ ] Strong Gmail App Password used
-- [ ] reCAPTCHA keys kept secure
 - [ ] SSL certificate working
+- [ ] Formspree spam protection enabled
+- [ ] Contact form validation working
 
 ## Final Steps
-- [ ] Update resume.html with your actual information
 - [ ] Test contact form from different devices
 - [ ] Set up monitoring/backups
 - [ ] Share your new website URL!
 
 ## Troubleshooting
 If something doesn't work:
-1. Check DreamHost application logs
-2. Verify .env file is in correct location
-3. Ensure all dependencies are installed
-4. Check file permissions
-5. Verify domain DNS settings 
+1. Check file permissions on DreamHost
+2. Verify Formspree endpoint is correct
+3. Check browser console for errors
+4. Verify domain DNS settings
+5. Test form submission manually 
