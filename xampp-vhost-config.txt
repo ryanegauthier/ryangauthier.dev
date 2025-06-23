@@ -1,0 +1,23 @@
+# XAMPP Virtual Host Configuration
+# Add this to C:\xampp\apache\conf\extra\httpd-vhosts.conf
+
+<VirtualHost *:80>
+    DocumentRoot "C:/Users/Ryan Gauthier/Documents/REG/websites/resume"
+    ServerName ryangauthier.local
+    ServerAlias www.ryangauthier.local
+    
+    <Directory "C:/Users/Ryan Gauthier/Documents/REG/websites/resume">
+        Options Indexes FollowSymLinks MultiViews
+        AllowOverride All
+        Require all granted
+    </Directory>
+    
+    ErrorLog "logs/ryangauthier.local-error.log"
+    CustomLog "logs/ryangauthier.local-access.log" combined
+</VirtualHost>
+
+# Also add this line to C:\xampp\apache\conf\httpd.conf (if not already there):
+# Include conf/extra/httpd-vhosts.conf
+
+# Add this to C:\Windows\System32\drivers\etc\hosts:
+# 127.0.0.1 ryangauthier.local 

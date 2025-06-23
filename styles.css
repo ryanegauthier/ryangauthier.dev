@@ -1,0 +1,137 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: #f8f9fa;
+    padding: 100px 0;
+    margin-bottom: 30px;
+}
+
+.hero-section h1 {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.social-links a {
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #007bff !important;
+}
+
+/* Sections */
+section {
+    padding: 80px 0;
+}
+
+section h2 {
+    font-weight: 700;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+section h2:after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #007bff;
+    margin: 15px auto;
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    padding: 20px 0;
+}
+
+.timeline-item {
+    padding: 20px;
+    margin-bottom: 30px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.timeline-item h4 {
+    color: #007bff;
+    margin-bottom: 5px;
+}
+
+.timeline-item h5 {
+    color: #6c757d;
+    margin-bottom: 10px;
+}
+
+/* Skills Section */
+#skills ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+#skills ul li:last-child {
+    border-bottom: none;
+}
+
+/* Projects Section */
+.card {
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body .btn {
+    margin-top: auto;
+}
+
+/* Contact Form */
+.form-control {
+    border-radius: 0;
+    border: 1px solid #ddd;
+    padding: 12px;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #007bff;
+}
+
+.btn-primary {
+    border-radius: 0;
+    padding: 10px 25px;
+    background-color: #007bff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 60px 0;
+    }
+    
+    section {
+        padding: 40px 0;
+    }
+    
+    .timeline-item {
+        margin-bottom: 20px;
+    }
+} 
