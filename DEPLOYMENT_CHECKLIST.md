@@ -3,8 +3,8 @@
 ## Pre-Deployment Setup
 - [x] Formspree account created
 - [x] Formspree form endpoint obtained
-- [ ] Google reCAPTCHA account created
-- [ ] reCAPTCHA site configured for ryangauthier.dev
+- [x] Google reCAPTCHA account created
+- [x] reCAPTCHA site configured for ryangauthier.dev
 - [ ] DreamHost shared hosting account
 
 ## DreamHost Configuration
@@ -15,7 +15,7 @@
 ## File Upload
 - [ ] All HTML, CSS, and image files uploaded to DreamHost server
 - [x] Formspree endpoint updated in index.html
-- [ ] reCAPTCHA keys added to form (if needed)
+- [x] reCAPTCHA keys added to form (if needed)
 
 ## Formspree Setup
 - [x] Account created at [formspree.io](https://formspree.io)

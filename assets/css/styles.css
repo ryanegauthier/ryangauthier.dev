@@ -61,6 +61,27 @@ body {
     color: white;
 }
 
+/* reCAPTCHA Styling */
+.g-recaptcha {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.g-recaptcha > div {
+    margin: 0 auto;
+}
+
+/* Contact Form Styling */
+.contact-form {
+    margin-top: 30px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 15px;
+}
+
 /* Sections */
 section {
     padding: 80px 0;
@@ -175,5 +196,10 @@ section h2:after {
         font-size: 2em;
         margin: 0 10px;
         padding: 12px;
+    }
+    
+    .g-recaptcha {
+        transform: scale(0.9);
+        transform-origin: center;
     }
 } 
