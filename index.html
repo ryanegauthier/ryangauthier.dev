@@ -37,7 +37,7 @@
 					<ul class="icons">
 						<li><a href="https://github.com/ryanegauthier" class="icon brands fa-github"><span class="label">Github</span></a></li>
 						<li><a href="https://www.linkedin.com/in/ryanegauthier/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-						<li><a href="mailto:ryan.eugene.gauthier@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						<li><a href="#" class="icon solid fa-envelope" id="header-email"><span class="label">Email</span></a></li>
 					</ul>
 				</footer>
 			</section>
@@ -162,7 +162,7 @@
 									<p>Available for remote and local opportunities. Let's connect to discuss how I can contribute to your team and projects.</p>
 									<div class="row">
 										<div class="col-6 col-12-xsmall">
-											<p><i class="fas fa-envelope"></i> ryan.eugene.gauthier@gmail.com</p>
+											<p><i class="fas fa-envelope"></i> <span id="email-address"></span></p>
 											<p><i class="fas fa-map-marker-alt"></i> Available for remote and local opportunities</p>
 										</div>
 										<div class="col-6 col-12-xsmall">
@@ -221,6 +221,33 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			
+		<!-- Email Obfuscation -->
+		<script>
+			// Simple email obfuscation to prevent harvesting
+			document.addEventListener('DOMContentLoaded', function() {
+				const email = 'contact' + '@' + 'ryangauthier.dev';
+				
+				// Handle contact section email
+				const emailSpan = document.getElementById('email-address');
+				if (emailSpan) {
+					emailSpan.textContent = email;
+					emailSpan.style.cursor = 'pointer';
+					emailSpan.addEventListener('click', function() {
+						window.location.href = 'mailto:' + email;
+					});
+				}
+				
+				// Handle header email icon
+				const headerEmail = document.getElementById('header-email');
+				if (headerEmail) {
+					headerEmail.addEventListener('click', function(e) {
+						e.preventDefault();
+						window.location.href = 'mailto:' + email;
+					});
+				}
+			});
+		</script>
 
 	</body>
 </html>
